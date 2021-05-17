@@ -7,18 +7,105 @@
     <a-scene 
         embedded 
         arjs = "patternRatio: 0.90">
-      <a-marker 
-        id = "example-marker"
-        type = "pattern" 
-        preset = "custom"
-        url = "./assets/patterns/example-pattern-marker.patt">
-        <a-entity
-            id = "example-cube"
-            position = "0 0 0"
-            scale = "0.5 0.5 0.5"
-            gltf-model = "./assets/models/example-cube.gltf"
-        ></a-entity>
-      </a-marker>
+
+        <!-- example marker -->
+        <a-marker 
+            id = "example-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/example-pattern-marker.patt">
+            <a-entity
+                id = "example-cube"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/example-cube.gltf"
+            ></a-entity>
+        </a-marker>
+
+        <!-- cupcake-logo
+        <a-marker 
+            id = "cupcake-logo-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/webpage-qr-pattern-marker.patt">
+            <a-entity
+                id = "cupcake-logo"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/cupcake-logo.gltf"
+            ></a-entity>
+        </a-marker> -->
+
+        <!-- pie-wallace -->
+        <a-marker 
+            id = "pie-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/pattern-pie-marker.patt">
+            <a-entity
+                id = "pie"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/pie.gltf"
+            ></a-entity>
+        </a-marker>
+
+        <!-- waffles-ws -->
+        <a-marker 
+            id = "waffles-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/pattern-waffles-marker.patt">
+            <a-entity
+                id = "waffles"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/waffles.gltf"
+            ></a-entity>
+        </a-marker>
+
+        <!-- donut-alia -->
+        <a-marker 
+            id = "donut-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/pattern-donut-marker.patt">
+            <a-entity
+                id = "donut"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/donut/donut.gltf"
+            ></a-entity>
+        </a-marker>
+
+        <!-- croissant-serena -->
+        <a-marker 
+            id = "croissant-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/pattern-croissant-marker.patt">
+            <a-entity
+                id = "donut"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/croissant/croissant.gltf"
+            ></a-entity>
+        </a-marker>
+
+        <!-- cupcakes-ml -->
+        <a-marker 
+            id = "cupcakes-marker"
+            type = "pattern" 
+            preset = "custom"
+            url = "./assets/patterns/pattern-cupcakes-marker.patt">
+            <a-entity
+                id = "donut"
+                position = "0 0 0"
+                scale = "0.5 0.5 0.5"
+                gltf-model = "./assets/models/cupcakes.gltf"
+            ></a-entity>
+        </a-marker>
+        
       <a-entity camera></a-entity>
     </a-scene>
   </body>
