@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="libraries/AR.js/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene 
+        embedded 
+        arjs = "patternRatio: 0.90">
+      <a-marker 
+        id = "example-marker"
+        type = "pattern" 
+        preset = "custom"
+        url = "./assets/patterns/example-pattern-marker.patt">
+        <a-entity
+            id = "example-cube"
+            position = "0 0 0"
+            scale = "0.5 0.5 0.5"
+            gltf-model = "./assets/models/example-cube.gltf"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
