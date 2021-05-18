@@ -16,7 +16,16 @@
             gesture-detector
             id="scene">
 
-            <!-- example marker -->
+            <a-assets>
+                <audio id="logo-theme" src="assets/audios/take-a-chance-by-kevin-macleod-from-filmmusic-io.mp3" autoplay="false" preload="auto" loop="true"></audio>
+                <audio id="pie-theme" src="assets/audios/almost-bliss-by-kevin-macleod-from-filmmusic-io.mp3" autoplay="false" preload="auto" loop="true"></audio>
+                <audio id="waffles-theme" src="assets/audios/backbay-lounge-by-kevin-macleod-from-filmmusic-io.mp3" autoplay="false" preload="auto" loop="true"></audio>
+                <audio id="donut-theme" src="assets/audios/bossa-antigua-by-kevin-macleod-from-filmmusic-io.mp3" autoplay="false" preload="auto" loop="true"></audio>
+                <audio id="croissant-theme" src="assets/audios/george-street-shuffle-by-kevin-macleod-from-filmmusic-io.mp3" autoplay="false" preload="auto" loop="true"></audio>
+                <audio id="cupcakes-theme" src="assets/audios/smooth-lovin-by-kevin-macleod-from-filmmusic-io.mp3" autoplay="false" preload="auto" loop="true"></audio>
+            </a-assets>
+            
+            <!-- example marker
             <a-marker 
                 id = "example-marker"
                 type = "pattern" 
@@ -34,7 +43,7 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>
-            </a-marker>
+            </a-marker> -->
 
             <!-- cupcake-logo -->
             <a-marker 
@@ -50,7 +59,7 @@
                     position = "0 0 0"
                     scale = "0.5 0.5 0.5"
                     gltf-model = "./assets/models/cupcake-logo.gltf"
-                    audiohandler = "marker: #cupcake-logo-marker; entity: #cupcake-logo;"
+                    audiohandler = "marker: #cupcake-logo-marker; entity: #cupcake-logo; audio: #logo-theme;"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -70,7 +79,7 @@
                     position = "0 0 0"
                     scale = "0.8 0.8 0.8"
                     gltf-model = "./assets/models/pie.gltf"
-                    audiohandler = "marker: #pie-marker; entity: #pie;"
+                    audiohandler = "marker: #pie-marker; entity: #pie; audio: #pie-theme;"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -90,7 +99,7 @@
                     position = "0 0 0"
                     scale = "0.2 0.2 0.2"
                     gltf-model = "./assets/models/waffles.gltf"
-                    audiohandler = "marker: #waffles-marker; entity: #waffles;"
+                    audiohandler = "marker: #waffles-marker; entity: #waffles; audio: #waffles-theme;"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -110,7 +119,7 @@
                     position = "0 0 0"
                     scale = "0.3 0.3 0.3"
                     gltf-model = "./assets/models/donut/donut.gltf"
-                    audiohandler = "marker: #donut-marker; entity: #donut;"
+                    audiohandler = "marker: #donut-marker; entity: #donut; audio: #donut-theme;"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -130,7 +139,7 @@
                     position = "0 0 0"
                     scale = "0.5 0.5 0.5"
                     gltf-model = "./assets/models/croissant/croissant.gltf"
-                    audiohandler = "marker: #croissant-marker; entity: #croissant;"
+                    audiohandler = "marker: #croissant-marker; entity: #croissant; audio: #croissant-theme;"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -150,7 +159,7 @@
                     position = "0 0 0"
                     scale = "0.2 0.2 0.2"
                     gltf-model = "./assets/models/cupcakes.gltf"
-                    audiohandler = "marker: #cupcakes-marker; entity: #cupcakes;"
+                    audiohandler = "marker: #cupcakes-marker; entity: #cupcakes; audio: #cupcakes-theme;"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
