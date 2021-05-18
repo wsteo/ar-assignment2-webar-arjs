@@ -4,26 +4,35 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="libraries/AR.js/aframe-ar.js"></script>
     <script src="scripts/audio-handler.js"></script>
+    <script src="scripts/gesture-detector.js"></script>
+    <script src="scripts/gesture-handler.js"></script>
 
     <body style="margin : 0px; overflow: hidden;">
         <a-scene
             vr-mode-ui="enabled: false;"
             renderer="logrithmicDepthBuffer: true;"
             embedded 
-            arjs = "patternRatio: 0.90">
+            arjs = "patternRatio: 0.90"
+            gesture-detector
+            id="scene">
 
             <!-- example marker -->
             <a-marker 
                 id = "example-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/example-pattern-marker.patt">
+                url = "./assets/patterns/example-pattern-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "example-cube"
                     position = "0 0 0"
                     scale = "0.5 0.5 0.5"
                     gltf-model = "./assets/models/example-cube.gltf"
                     audiohandler = "marker: #example-maker; entity= #example-cube;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
 
@@ -32,13 +41,18 @@
                 id = "cupcake-logo-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/pattern-webpage-qr-pattern-marker.patt">
+                url = "./assets/patterns/pattern-webpage-qr-pattern-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "cupcake-logo"
                     position = "0 0 0"
                     scale = "0.5 0.5 0.5"
                     gltf-model = "./assets/models/cupcake-logo.gltf"
                     audiohandler = "marker: #cupcake-logo-marker; entity: #cupcake-logo;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
 
@@ -47,13 +61,18 @@
                 id = "pie-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/pattern-pie-marker.patt">
+                url = "./assets/patterns/pattern-pie-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "pie"
                     position = "0 0 0"
                     scale = "0.8 0.8 0.8"
                     gltf-model = "./assets/models/pie.gltf"
                     audiohandler = "marker: #pie-marker; entity: #pie;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
 
@@ -62,13 +81,18 @@
                 id = "waffles-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/pattern-waffles-marker.patt">
+                url = "./assets/patterns/pattern-waffles-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "waffles"
                     position = "0 0 0"
                     scale = "0.2 0.2 0.2"
                     gltf-model = "./assets/models/waffles.gltf"
                     audiohandler = "marker: #waffles-marker; entity: #waffles;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
 
@@ -77,13 +101,18 @@
                 id = "donut-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/pattern-donut-marker.patt">
+                url = "./assets/patterns/pattern-donut-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "donut"
                     position = "0 0 0"
                     scale = "0.3 0.3 0.3"
                     gltf-model = "./assets/models/donut/donut.gltf"
                     audiohandler = "marker: #donut-marker; entity: #donut;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
 
@@ -92,13 +121,18 @@
                 id = "croissant-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/pattern-croissant-marker.patt">
+                url = "./assets/patterns/pattern-croissant-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "croissant"
                     position = "0 0 0"
                     scale = "0.5 0.5 0.5"
                     gltf-model = "./assets/models/croissant/croissant.gltf"
                     audiohandler = "marker: #croissant-marker; entity: #croissant;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
 
@@ -107,13 +141,18 @@
                 id = "cupcakes-marker"
                 type = "pattern" 
                 preset = "custom"
-                url = "./assets/patterns/pattern-cupcakes-marker.patt">
+                url = "./assets/patterns/pattern-cupcakes-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id = "cupcakes"
                     position = "0 0 0"
                     scale = "0.2 0.2 0.2"
                     gltf-model = "./assets/models/cupcakes.gltf"
                     audiohandler = "marker: #cupcakes-marker; entity: #cupcakes;"
+                    class="clickable"
+                    gesture-handler
                 ></a-entity>
             </a-marker>
             
