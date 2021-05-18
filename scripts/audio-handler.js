@@ -9,6 +9,8 @@ AFRAME.registerComponent("audiohandler",{
         this._marker = document.querySelector(this.data.marker);
         this._entity = document.querySelector(this.data.entity);
         this._audio = document.querySelector(this.data.audio);
+        this.trigger = false;
+        this._audio.pause();
     },
     
     tick:function(){
@@ -17,15 +19,21 @@ AFRAME.registerComponent("audiohandler",{
         var _audio = this._audio;
 
         if (_marker){
-            _marker.addEventListener("markerFound", ()=>{
-                console.log("Marker Found!");
-                _audio.play();
-            });
+            if (!this.trigger) {
+                _marker.addEventListener("markerFound", ()=>{
+                    console.log("Marker Found!");
+                    _audio.play();
+                    this.trigger = true;
+                });
+            }
+            else {
+                _marker.addEventListener("markerLost", ()=>{
+                    console.log("Marker Lost!");
+                    _audio.pause();
+                    this.trigger = false;
+                });
+            }
 
-            _marker.addEventListener("markerLost", ()=>{
-                console.log("Marker Lost!");
-                _audio.pause();
-            });
         }
     }
 });
