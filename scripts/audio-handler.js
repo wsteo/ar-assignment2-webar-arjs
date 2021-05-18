@@ -21,14 +21,12 @@ AFRAME.registerComponent("audiohandler",{
         if (_marker){
             if (!this.trigger) {
                 _marker.addEventListener("markerFound", ()=>{
-                    console.log("Marker Found!");
                     _audio.play();
                     this.trigger = true;
                 });
             }
             else {
                 _marker.addEventListener("markerLost", ()=>{
-                    console.log("Marker Lost!");
                     _audio.pause();
                     this.trigger = false;
                 });
