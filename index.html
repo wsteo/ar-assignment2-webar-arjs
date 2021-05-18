@@ -1,112 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="libraries/AR.js/aframe-ar.js"></script>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene 
-        embedded 
-        arjs = "patternRatio: 0.90">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="libraries/AR.js/aframe-ar.js"></script>
+    <script src="scripts/audio-handler.js"></script>
 
-        <!-- example marker -->
-        <a-marker 
-            id = "example-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/example-pattern-marker.patt">
-            <a-entity
-                id = "example-cube"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/example-cube.gltf"
-            ></a-entity>
-        </a-marker>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            renderer="logrithmicDepthBuffer: true;"
+            embedded 
+            arjs = "patternRatio: 0.90">
 
-        <!-- cupcake-logo -->
-        <a-marker 
-            id = "cupcake-logo-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/pattern-webpage-qr-pattern-marker.patt">
-            <a-entity
-                id = "cupcake-logo"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/cupcake-logo.gltf"
-            ></a-entity>
-        </a-marker>
+            <!-- example marker -->
+            <a-marker 
+                id = "example-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/example-pattern-marker.patt">
+                <a-entity
+                    id = "example-cube"
+                    position = "0 0 0"
+                    scale = "0.5 0.5 0.5"
+                    gltf-model = "./assets/models/example-cube.gltf"
+                    audiohandler = "marker: #example-maker; entity= #example-cube;"
+                ></a-entity>
+            </a-marker>
 
-        <!-- pie-wallace -->
-        <a-marker 
-            id = "pie-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/pattern-pie-marker.patt">
-            <a-entity
-                id = "pie"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/pie.gltf"
-            ></a-entity>
-        </a-marker>
+            <!-- cupcake-logo -->
+            <a-marker 
+                id = "cupcake-logo-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/pattern-webpage-qr-pattern-marker.patt">
+                <a-entity
+                    id = "cupcake-logo"
+                    position = "0 0 0"
+                    scale = "0.5 0.5 0.5"
+                    gltf-model = "./assets/models/cupcake-logo.gltf"
+                    audiohandler = "marker: #cupcake-logo-marker; entity: #cupcake-logo;"
+                ></a-entity>
+            </a-marker>
 
-        <!-- waffles-ws -->
-        <a-marker 
-            id = "waffles-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/pattern-waffles-marker.patt">
-            <a-entity
-                id = "waffles"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/waffles.gltf"
-            ></a-entity>
-        </a-marker>
+            <!-- pie-wallace -->
+            <a-marker 
+                id = "pie-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/pattern-pie-marker.patt">
+                <a-entity
+                    id = "pie"
+                    position = "0 0 0"
+                    scale = "0.8 0.8 0.8"
+                    gltf-model = "./assets/models/pie.gltf"
+                    audiohandler = "marker: #pie-marker; entity: #pie;"
+                ></a-entity>
+            </a-marker>
 
-        <!-- donut-alia -->
-        <a-marker 
-            id = "donut-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/pattern-donut-marker.patt">
-            <a-entity
-                id = "donut"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/donut/donut.gltf"
-            ></a-entity>
-        </a-marker>
+            <!-- waffles-ws -->
+            <a-marker 
+                id = "waffles-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/pattern-waffles-marker.patt">
+                <a-entity
+                    id = "waffles"
+                    position = "0 0 0"
+                    scale = "0.2 0.2 0.2"
+                    gltf-model = "./assets/models/waffles.gltf"
+                    audiohandler = "marker: #waffles-marker; entity: #waffles;"
+                ></a-entity>
+            </a-marker>
 
-        <!-- croissant-serena -->
-        <a-marker 
-            id = "croissant-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/pattern-croissant-marker.patt">
-            <a-entity
-                id = "donut"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/croissant/croissant.gltf"
-            ></a-entity>
-        </a-marker>
+            <!-- donut-alia -->
+            <a-marker 
+                id = "donut-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/pattern-donut-marker.patt">
+                <a-entity
+                    id = "donut"
+                    position = "0 0 0"
+                    scale = "0.3 0.3 0.3"
+                    gltf-model = "./assets/models/donut/donut.gltf"
+                    audiohandler = "marker: #donut-marker; entity: #donut;"
+                ></a-entity>
+            </a-marker>
 
-        <!-- cupcakes-ml -->
-        <a-marker 
-            id = "cupcakes-marker"
-            type = "pattern" 
-            preset = "custom"
-            url = "./assets/patterns/pattern-cupcakes-marker.patt">
-            <a-entity
-                id = "donut"
-                position = "0 0 0"
-                scale = "0.5 0.5 0.5"
-                gltf-model = "./assets/models/cupcakes.gltf"
-            ></a-entity>
-        </a-marker>
-        
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+            <!-- croissant-serena -->
+            <a-marker 
+                id = "croissant-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/pattern-croissant-marker.patt">
+                <a-entity
+                    id = "croissant"
+                    position = "0 0 0"
+                    scale = "0.5 0.5 0.5"
+                    gltf-model = "./assets/models/croissant/croissant.gltf"
+                    audiohandler = "marker: #croissant-marker; entity: #croissant;"
+                ></a-entity>
+            </a-marker>
+
+            <!-- cupcakes-ml -->
+            <a-marker 
+                id = "cupcakes-marker"
+                type = "pattern" 
+                preset = "custom"
+                url = "./assets/patterns/pattern-cupcakes-marker.patt">
+                <a-entity
+                    id = "cupcakes"
+                    position = "0 0 0"
+                    scale = "0.2 0.2 0.2"
+                    gltf-model = "./assets/models/cupcakes.gltf"
+                    audiohandler = "marker: #cupcakes-marker; entity: #cupcakes;"
+                ></a-entity>
+            </a-marker>
+            
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
